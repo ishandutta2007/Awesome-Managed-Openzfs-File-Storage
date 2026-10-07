@@ -91,6 +91,17 @@ When designing self-hosted or hybrid cloud ZFS architectures:
 
 ---
 
+## 💖 Support & Buy Me a Coffee
+
+If you find this repository helpful, please consider showing your support:
+- 🌟 **Star this repository** on GitHub
+- 🍴 **Fork & Share** it with storage engineers, sysadmins, and cloud architects
+- ☕ **Sponsor / Buy a coffee**: If you'd like to support ongoing maintenance and research, consider sponsoring via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Thank you for being part of the open-source storage community! 🙌
+
+---
+
 ## 🤝 How to Contribute
 
 Contributions are welcome! To add or update a platform:
@@ -110,7 +121,7 @@ Contributions are welcome! To add or update a platform:
 
 ## 📊 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-Managed-Openzfs-File-Storage&type=Date)](https://star-history.com/#ishandutta2007/Awesome-Managed-Openzfs-File-Storage&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Managed-Openzfs-File-Storage&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Managed-Openzfs-File-Storage&type=date&legend=top-left)
 
 ---
 
