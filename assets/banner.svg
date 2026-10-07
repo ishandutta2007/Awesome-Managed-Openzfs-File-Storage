@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Glowing Effects -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="340" fill="url(#bgGrad)" rx="16"/>
+  <rect width="1200" height="340" fill="url(#grid)" rx="16"/>
+
+  <!-- Dynamic / Animated Background Wave Elements (Kept strictly behind foreground text) -->
+  <g opacity="0.25">
+    <path d="M -100 280 Q 200 150 500 240 T 1100 180 T 1300 260 L 1300 350 L -100 350 Z" fill="url(#accentGrad)">
+      <animate attributeName="d" 
+               values="M -100 280 Q 200 150 500 240 T 1100 180 T 1300 260 L 1300 350 L -100 350 Z;
+                       M -100 250 Q 250 220 550 180 T 1050 240 T 1300 220 L 1300 350 L -100 350 Z;
+                       M -100 280 Q 200 150 500 240 T 1100 180 T 1300 260 L 1300 350 L -100 350 Z" 
+               dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M -100 200 Q 300 300 600 200 T 1200 250 L 1200 350 L -100 350 Z" fill="#3b82f6" opacity="0.3">
+      <animate attributeName="d" 
+               values="M -100 200 Q 300 300 600 200 T 1200 250 L 1200 350 L -100 350 Z;
+                       M -100 230 Q 350 180 650 250 T 1200 200 L 1200 350 L -100 350 Z;
+                       M -100 200 Q 300 300 600 200 T 1200 250 L 1200 350 L -100 350 Z" 
+               dur="16s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Background Data Flow Nodes (Floating circles at sides) -->
+  <g opacity="0.6">
+    <circle cx="100" cy="80" r="4" fill="#06b6d4">
+      <animate attributeName="cy" values="80;95;80" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1100" cy="100" r="6" fill="#8b5cf6">
+      <animate attributeName="cy" values="100;85;100" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1050" cy="240" r="3" fill="#3b82f6">
+      <animate attributeName="cy" values="240;255;240" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Foreground Main Banner Content Header Block -->
+  <g transform="translate(60, 45)">
+    <!-- Badge Pill Header -->
+    <rect x="0" y="0" width="310" height="32" rx="16" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="16" cy="16" r="5" fill="#38bdf8" filter="url(#glow)"/>
+    <text x="32" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#38bdf8" letter-spacing="1">
+      ENTERPRISE STORAGE ECOSYSTEM
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Awesome Managed OpenZFS
+    </text>
+
+    <!-- Gradient Sub-Title Line -->
+    <text x="0" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="url(#accentGrad)">
+      High-Performance Cloud &amp; Self-Hosted Storage Solutions
+    </text>
+
+    <!-- Description Paragraph -->
+    <text x="0" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">
+      A curated guide to SaaS platforms, automated replication, snapshot managers, &amp; OpenZFS tooling.
+    </text>
+  </g>
+
+  <!-- Decorative Interactive Tech Pill Badges at Bottom Right (Non-overlapping) -->
+  <g transform="translate(60, 260)">
+    <!-- Feature Tag 1 -->
+    <rect x="0" y="0" width="140" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="16" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">⚡ 1M+ IOPS</text>
+
+    <!-- Feature Tag 2 -->
+    <rect x="152" y="0" width="165" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="168" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">🔒 Data Integrity</text>
+
+    <!-- Feature Tag 3 -->
+    <rect x="329" y="0" width="175" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="345" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">🔄 Auto Replication</text>
+    
+    <!-- Feature Tag 4 -->
+    <rect x="516" y="0" width="160" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="532" y="22" font-family="sans-serif" font-size="13" font-weight="600" fill="#cbd5e1">🌐 Multi-AZ HA</text>
+  </g>
+
+  <!-- Accent Top Border Line -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accentGrad)" rx="2"/>
+</svg>
